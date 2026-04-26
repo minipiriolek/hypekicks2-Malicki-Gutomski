@@ -1,13 +1,14 @@
 plugins {
     alias(libs.plugins.android.application)
+    id("com.google.gms.google-services")
 }
 
 android {
     namespace = "com.example.hypekicks2_malicki_gutomski"
-    compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
-        }
+    compileSdk = 36
+
+    buildFeatures {
+        viewBinding = true
     }
 
     defaultConfig {
@@ -44,4 +45,9 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
+    // Firebase Firestore (Baza danych)
+    implementation("com.google.firebase:firebase-firestore-ktx:24.10.0")
+    // Glide (Wyświetlanie zdjęć z linków)
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.16.0")
 }
