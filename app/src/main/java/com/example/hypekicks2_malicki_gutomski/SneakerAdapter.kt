@@ -32,10 +32,10 @@ class SneakerAdapter(private val context: Context, private var list: List<Sneake
         binding.tvModelName.text = sneaker.modelName
 
 
-        // Magia Glide - pobieranie zdjęcia z linku
+
         Glide.with(context)
             .load(sneaker.imageUrl)
-            .placeholder(android.R.drawable.ic_menu_gallery) // obrazek zastępczy
+            .placeholder(android.R.drawable.ic_menu_gallery)
             .into(binding.ivSneakerImage)
 
         return view
