@@ -51,6 +51,6 @@ dependencies {
     // Firebase Firestore (Baza danych)
     implementation("com.google.firebase:firebase-firestore-ktx:24.10.0")
     // Glide (Wyświetlanie zdjęć z linków)
-    implementation("github.com.bumptech.glide:glide:4.16.0")
-    annotationProcessor("github.com.bumptech.glide:compiler:4.16.0")
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.16.0")
 }
