@@ -5,13 +5,10 @@ plugins {
 
 android {
     namespace = "com.example.hypekicks2_malicki_gutomski"
-    compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
-        }
-        buildFeatures {
-            viewBinding = true
-        }
+    compileSdk = 36
+
+    buildFeatures {
+        viewBinding = true
     }
 
     defaultConfig {
