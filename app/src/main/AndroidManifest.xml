@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Hypekicks2Malicki_Gutomski">
         <activity
+            android:name=".DetailsActivity"
+            android:exported="false" />
+        <activity
             android:name=".StorefrontActivity"
             android:exported="false" />
         <activity
