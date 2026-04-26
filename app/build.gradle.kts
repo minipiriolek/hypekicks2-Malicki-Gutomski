@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -7,6 +8,9 @@ android {
     compileSdk {
         version = release(36) {
             minorApiLevel = 1
+        }
+        buildFeatures {
+            viewBinding = true
         }
     }
 
@@ -44,4 +48,9 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
+    // Firebase Firestore (Baza danych)
+    implementation("com.google.firebase:firebase-firestore-ktx:24.10.0")
+    // Glide (Wyświetlanie zdjęć z linków)
+    implementation("github.com.bumptech.glide:glide:4.16.0")
+    annotationProcessor("github.com.bumptech.glide:compiler:4.16.0")
 }
